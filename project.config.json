@@ -1,0 +1,13 @@
+{
+  "description": "api趣用",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram",
+  "appid": "wx958f42867362578f",
+  "projectname": "api趣用",
+  "miniprogramRoot": "./dist"
+}
