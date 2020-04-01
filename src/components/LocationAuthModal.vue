@@ -6,7 +6,11 @@
         <view class="success-tip">
             小程序需要您开启位置授权，请打开设置->位置信息->仅在使用小程序期间
         </view>
-        <button class="know-button" open-type="openSetting" @opensetting="opensetting">设置</button>
+        <view class="button-box">
+          <navigator class="exit-button" open-type="exit" target="miniProgram">退出</navigator>
+          <button class="know-button" open-type="openSetting" @opensetting="opensetting">设置</button>
+        </view>
+        
     </view>
   </view>
 </template>
@@ -66,12 +70,24 @@
         color: #666666;
         text-align: center;
     }
-    .know-button{
-        margin-top: 33px;
-        width: 100%;
-        height: 96px;
-        font-size: 36px;
-	      color: #000;
-    }
+}
+.button-box{
+  display: flex;
+  .exit-button, .know-button{
+    display: block;
+    flex: 1;
+    height: 96px;
+    margin-top: 33px;
+    width: 100%;
+    height: 96px;
+    font-size: 36px;
+    color: #000;
+    line-height: 96px;
+    text-align: center;
+    border:none;
+    background-color:transparent;
+    padding: 0;
+    border-radius: 0;
+  }
 }
 </style>

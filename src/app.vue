@@ -8,7 +8,8 @@ export default class extends wepy.app {
   }
   config = {
     pages: [
-      'pages/index'
+      'pages/index',
+      'pages/my/index'
     ],
     'permission': {
       'scope.userLocation': {
