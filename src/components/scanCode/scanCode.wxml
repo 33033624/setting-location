@@ -1,0 +1,18 @@
+<view class="scancode_box">
+  <view bindtap="scancode" class="scancode_fixbutton">扫码</view>
+  <view class="scancode_modal" wx:if="{{showModal}}">
+    <view class="scancode_modal--filter"></view>
+    <view class="scancode_modal--content">
+      <view class="scancode_modal--title">二维码信息</view>
+      <view class="scancode_modal--detail">
+        <text>path: {{scanCodeParams['path']}}</text>
+        <text>result: {{scanCodeParams['result']}}</text>
+        <text>rawData: {{scanCodeParams['rawData']}}</text>
+      </view>
+      <view class="scancode_modal--buttonbox">
+        <view bindtap="navCodePage" type="primary">跳转到Path</view>
+        <view bindtap="close">关闭</view>
+      </view>    
+    </view>
+  </view>
+</view>

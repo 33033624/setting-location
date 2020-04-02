@@ -9,25 +9,28 @@
       <view>rawData: {{scanCodeParams['rawData']}}</view>
     </view>
     <button @tap="navCodePage" >跳转</button> -->
-    <ScanCode />
+    <scanCode />
   </view>
 </template>
 <script>
   import wepy from 'wepy'
   import LocationAuthModal from '@/components/LocationAuthModal'
-  import ScanCode from '@/components/qrcode/scanCode'
+  // import ScanCode from '@/components/qrcode/scanCode'
   import Mixins from '../mixin/common-mixins.js'
   export default class Index extends wepy.page {
     components = {
-      LocationAuthModal,
-      ScanCode
+      LocationAuthModal
+      // ScanCode
     }
     mixins = [Mixins]
     data = {
       scanCodeParams: {}
     }
     config = {
-      navigationBarTitleText: '位置信息授权处理'
+      navigationBarTitleText: '位置信息授权处理',
+      usingComponents: {
+        scanCode: '../components/scanCode/scanCode'
+      }
     }
     onLoad () {
       this.getLocation(this.resolveLocation)
