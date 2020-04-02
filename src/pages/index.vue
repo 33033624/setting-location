@@ -1,23 +1,26 @@
 <template>
   <view class="container">
     <LocationAuthModal />
-    <button @tap="scancode" type="primary">调用扫码</button>
+    <!-- <button @tap="scancode" type="primary">调用扫码</button>
     <view>
       <text>扫码获取的参数项</text>
       <view>path: {{scanCodeParams['path']}}</view>
       <view>result: {{scanCodeParams['result']}}</view>
       <view>rawData: {{scanCodeParams['rawData']}}</view>
     </view>
-    <button @tap="navCodePage" >跳转</button>
+    <button @tap="navCodePage" >跳转</button> -->
+    <ScanCode />
   </view>
 </template>
 <script>
   import wepy from 'wepy'
   import LocationAuthModal from '@/components/LocationAuthModal'
+  import ScanCode from '@/components/qrcode/scanCode'
   import Mixins from '../mixin/common-mixins.js'
   export default class Index extends wepy.page {
     components = {
-      LocationAuthModal
+      LocationAuthModal,
+      ScanCode
     }
     mixins = [Mixins]
     data = {
